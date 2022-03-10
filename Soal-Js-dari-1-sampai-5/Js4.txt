@@ -1,0 +1,48 @@
+// Expected Result : 
+// [
+//   { id: '1', name: 'Sherlock', score: 90 },
+//   { id: '4', name: 'Budi', score: 85 }
+// ]
+// Direction :
+// Return array of student for score is bigger than mean score (average score)
+
+const students = [
+    {
+      id: "1",
+      name: "Sherlock",
+      score:90
+    },
+    {
+      id: "2",
+      name: "Genta",
+      score: 75
+    },
+    {
+      id: "3",
+      name: "Ai",
+      score: 80
+    },
+    {
+      id: "4",
+      name: "Budi",
+      score:85
+    }
+  ]
+  
+  function result() {
+    // Your Code Here
+    var hasil = [];
+    var avg = 0;
+    for (var i=0;i<students.length;i++){
+        avg = avg + students[i].score;
+    }
+    avg = avg / students.length;
+    for (var i=0;i<students.length;i++){
+        if (students[i].score > avg){
+            hasil.push(students[i]);
+        }
+    }
+    return hasil;
+  }
+  
+  console.log(result());
